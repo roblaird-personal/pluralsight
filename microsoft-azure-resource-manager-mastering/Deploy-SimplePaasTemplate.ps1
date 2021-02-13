@@ -1,9 +1,9 @@
 ﻿### Define Deployment Variables
 {
-$location = 'Australia Southeast'
+$location = 'UK West'
 $resourceGroupName = 'contoso-simple-paas-template'
 $resourceDeploymentName = 'contoso-paas-template-deployment'
-$templatePath = $env:SystemDrive + '\' + 'pluralsight'
+$templatePath = $env:SystemDrive + '\' + '\Users\roblaird\source\repos\roblaird-personal\pluralsight\microsoft-azure-resource-manager-mastering'
 $templateFile = 'simplePaas.json'
 $template = $templatePath + '\' + $templateFile
 }

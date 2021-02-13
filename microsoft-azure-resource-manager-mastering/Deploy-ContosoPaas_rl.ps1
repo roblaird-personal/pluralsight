@@ -1,11 +1,11 @@
 ﻿### Define Deployment Variables
 {
-$location = 'UK West'
-$resourceGroupName = 'contoso-simple-iaas-template'
-$resourceDeploymentName = 'contoso-iaas-template-deployment'
-$templatePath = $env:SystemDrive + '\' + '\Users\roblaird\source\repos\roblaird-personal\pluralsight\microsoft-azure-resource-manager-mastering'
-#$templateFile = 'simpleIaas.json'
+$resourceGroupLocation = 'UK West'
+$resourceGroupName = 'contoso-paas'
+$resourceDeploymentName = 'contoso-paas-deployment'
+$templatePath = $templatePath = $env:SystemDrive + '\' + 'Users\roblaird\source\repos\roblaird-personal\pluralsight\microsoft-azure-resource-manager-mastering'
 $templateFile = 'contosoPass_rl.json'
+#$templateFile = 'simpleIaas_rl.json'
 $template = $templatePath + '\' + $templateFile
 }
 
@@ -13,7 +13,7 @@ $template = $templatePath + '\' + $templateFile
 {
 New-AzureRmResourceGroup `
     -Name $resourceGroupName `
-    -Location $location `
+    -Location $resourceGroupLocation `
     -Verbose -Force
 }
 
